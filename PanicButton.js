@@ -133,7 +133,8 @@ const PanicButton = () => {
         setLatitude(latitude);
         setLongitude(longitude);
         try {
-          const response = await axios.get(`https://maps.googleapis.com/maps/api/geocode/json?latlng=${latitude},${longitude}&key=AIzaSyDhwyMaOyKC8-b_N0_4VFeyBUegiYBYsP8`);
+          const response = await axios.get(`
+          `);
           if (response.data && response.data.results && response.data.results.length > 0) {
             const address = response.data.results[0].formatted_address;
             setLocation(address);
